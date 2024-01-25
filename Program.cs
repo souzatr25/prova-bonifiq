@@ -15,6 +15,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<RandomService>();
 builder.Services.AddScoped<ProductService>();
 builder.Services.AddScoped<CustomerService>();
+builder.Services.AddScoped<OrderService>();
+builder.Services.AddScoped<PixPaymentService>();
+builder.Services.AddScoped<CreditCardPaymentService>();
+builder.Services.AddScoped<PaypalPaymentService>();
 builder.Services.AddDbContext<TestDbContext>(options =>
 	options.UseSqlServer(builder.Configuration.GetConnectionString("ctx")));
 var app = builder.Build();
